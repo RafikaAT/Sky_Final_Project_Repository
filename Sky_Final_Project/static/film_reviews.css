@@ -1,0 +1,38 @@
+.film-reviews-movie-title {
+    color:#EC8916;
+    font-family: Roboto;
+}
+
+
+#Film-Reviews-Heading{
+    color: #EC8916;
+    font-family: Roboto;
+}
+
+.film-reviews-images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.preview-and-prompt-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.read-more-button{
+    border: 1px #EC8916;
+    border-radius: 5px;
+    width: 5%;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%;
+    padding-bottom:2%;
+    background-color: #EC8916;
+    text-decoration: none;
+    color:black;
+    font-family: Roboto;
+}

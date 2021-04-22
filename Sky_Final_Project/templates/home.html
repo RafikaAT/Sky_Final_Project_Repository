@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Movie Maniac</h1>
+<!--May need to change image file paths when we make folders-->
+<!--    <div class="home-main-picture_1"></div>-->
+<!--    <div class="home-main-picture_2"></div>-->
+
+<!--This is the first section - the blog name + two images side by side + -->
+<section id="home-main">
+    <div class="home-main-pic">
+        <img src='../static/galactic_wall.jpeg'>
+    </div>
+    <div class="home-main-pic">
+        <img src='../static/andromeda.jpeg'>
+    </div>
+    <a href= “add-link-here” alt=“All-Reviews”>Click Here To Read All Reviews</a>
+</section>
+
+<section id="top-rated-movies">
+  <h2>Top Rated Movies</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"
+
+                 <div id="top-rated-carousel" class="carousel slide" data-bs-ride="carousel">
+                     <div class="carousel-inner" role="listbox">
+
+                         <div class="carousel-item active">
+                            <img src="../static/parasite-still.png" class ="d-block w-100" alt="Parasite"/>
+                             <div class="carousel-caption">
+                                 <h5>Parasite (2019)</h5>
+                                 <p>Parasite follows the Kim family struggling to make ends meet until son Ki-woo comes
+                                     across an unexpected opportunity.
+                                     With no experience teaching English, he decides to accept a job tutoring Da-hye,
+                                     a daughter from the wealthy Park family.</p>
+                             </div>
+                         </div>
+
+                         <div class="carousel_item">
+                              <img src="../static/ladybird-still.jpg" class ="d-block w-100" alt="Lady Bird"/>
+                                <div class="carousel-caption">
+                                    <h5>Lady Bird (2017)</h5>
+                                    <p>A nurse works tirelessly to keep her family afloat after her husband
+                                        loses his job. She also maintains a turbulent bond with a teenage daughter who
+                                        is just like her: loving, strong-willed and deeply opinionated.</p>
+                                </div>
+                         </div>
+
+                         <div class="carousel_item">
+                              <img src="../static/when-they-see-us-still.jpg" class ="d-block w-100" alt="When They See Us"/>
+                                <div class="carousel-caption">
+                                    <h5>When They See Us (2019)</h5>
+                                    <p>Based on events of the 1989 Central Park jogger case, When They See Us explores
+                                        the lives and families of the five black male suspects who were falsely accused
+                                        then prosecuted on charges related to the rape and assault of a white woman in
+                                        Central Park, New York City.</p>
+                                </div>
+                         </div>
+
+                         <button class="carousel-control-prev" data-bs-target="#top-rated-carousel" role="button" data-slide="prev">
+                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                             <span class="visually-hidden">Previous</span>
+                         </button>
+                         <button class="carousel-control-next" data-bs-target="#top-rated-carousel" role="button" data-bs-slide="next">
+                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                             <span class="visually-hidden">Next</span>
+                         </button>
+
+                         <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#top-rated-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#top-rated-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#top-rated-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                 </div>
+                     </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <div class="carousel-inner">-->
+<!--      <div class="top-rated-movie">-->
+<!--        <img src="../static/when-they-see-us.jpg" alt="When They See Us" style="width:100%;">-->
+<!--      </div>-->
+
+<!--      <div class="top-rated-movie">-->
+<!--        <img src="../static/parasite.jpg" alt="Parasite" style="width:100%;">-->
+<!--      </div>-->
+
+<!--      <div class="top-rated-movie">-->
+<!--        <img src=../static/ladybird.jpeg alt="Ladybird" style="width:100%;">-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Left and right controls &ndash;&gt;-->
+<!--    <a class="left carousel-control" href="#myCarousel" data-slide="prev">-->
+<!--      <span class="glyphicon glyphicon-chevron-left"></span>-->
+<!--      <span class="sr-only">Previous</span>-->
+<!--    </a>-->
+<!--    <a class="right carousel-control" href="#myCarousel" data-slide="next">-->
+<!--      <span class="glyphicon glyphicon-chevron-right"></span>-->
+<!--      <span class="sr-only">Next</span>-->
+<!--    </a>-->
+<!--  </div>-->
+</section>
+<!--        <h3>Top Rated Movies</h3>-->
+<!--        <img class="home-top-rated-image1" src="../static/when-they-see-us.jpg" width = "100px" height="150px">-->
+<!--        <img class="home-top-rated-image2" src="../static/parasite.jpg" width = "100px" height="150px">-->
+<!--        <img class="home-top-rated-image3" src="../static/ladybird.jpeg" width = "100px" height="150px">-->
+<!--    </div>-->
+
+    <br>
+    <br>
+
+    <div>
+        <h5 >Have a Look at All Our Reviews</h5>
+        <img class="home-review-intriguer-image" src="../static/i-tonya.jpg" width = "150px" height="200px">
+        <p>Some random text here, will need to make adjustments to this and the above h4 tag their own classes
+        to play with them in CSS. Do thrillers have your heart pumping? Or do romances make that heart flutter?
+        From comedy reviews that may well be funnier than the movie itself to fantasy criticisms that'll tell you all
+        you want to know about whether to watch the movie or not, we've got you. Come and take a look!</p>
+
+<!--        Read more button-->
+        <div>
+            <a href=“#” alt=“read-reviews”>Read More</a>
+        </div>
+    </div>
+
+    <div>
+        <h3>Our Latest Reviews</h3>
+        <section>
+            <a class="movie-review-label" href="#blank_link_for_now"><h6>Movie 1 Review</h6></a>
+            <img class="front-page-review-example" src="../static/the-boy-image.jpg" width = "100px" height="150px">
+            <p> Will have to be the first section of the review. Will have to figure out how to get it to automatically
+                become such. Is it JS? HTML? Python - I don't even know :D</p>
+        </section>
+
+        <section>
+            <a class="movie-review-label" href="#blank_link_for_now"><h6>Movie 2 Review</h6></a>
+            <img class="front-page-review-example" src="../static/get-hard-image.jpg" width = "100px" height="150px">
+            <p> Will have to be the first section of the review. Will have to figure out how to get it to automatically
+                become such. Is it JS? HTML? Python - I don't even know :D</p>
+        </section>
+
+        <section>
+            <a class="movie-review-label" href="#blank_link_for_now"><h6>Movie 3 Review</h6></a>
+            <img class="front-page-review-example" src="../static/all-the-bright-places-image.jpg" width = "100px" height="150px">
+            <p> Will have to be the first section of the review. Will have to figure out how to get it to automatically
+                become such. Is it JS? HTML? Python - I don't even know :D</p>
+        </section>
+    </div>
+    <br>
+    <br>
+{% endblock content %}
