@@ -2,67 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63822c5d-b01e-4ac7-acbf-ae57127f1052" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/all-the-bright-places-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/andromeda.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/base-html-stylesheets.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/film_reviews.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/galactic_wall.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/galactic_wall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/get-hard-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/grey-background-eg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/i-tonya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/judas-and-the-black-messiah-movie-poster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/ladybird-still.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/ladybird.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/new-gods-stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/nezha-reborn-img1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/nezha-reborn-img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/nezha-reborn-img3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/parasite-still.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/parasite.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/raya-movie-poster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/silk-road-movie-poster.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/the-boy-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../static/when-they-see-us-still.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../templates/film_reviews.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../templates/new-gods-nezha-reborn.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/pip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/pip3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/pip3.9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/bin/python3.9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../virtenv/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +22,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
