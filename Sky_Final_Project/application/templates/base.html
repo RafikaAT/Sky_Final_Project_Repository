@@ -14,7 +14,8 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base-html-stylesheets.css')}}">
 
 <!--    This is the CSS link for the film reviews page - can get rid of it and merge the file with base-html-->
-        <link rel="stylesheet" type="text/css" href="../static/film_reviews.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/film_reviews.css">
 
 
 </head>
@@ -35,9 +36,21 @@
             </div>
         </div>
         </nav>
-
-        {% block content %} {% endblock %}
 <!--Navbar ends here-->
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %} {% endblock %}
+
+
+
         <footer>
             <div class="social-menu">
                 <a href="https://twitter.com/" target="_blank">
@@ -65,7 +78,13 @@
                 <p>All Rights Reserved &copy; 2021 Movie Maniac</p>
             </div>
         </footer>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
     </body>
 </html>

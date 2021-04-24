@@ -3,10 +3,12 @@ from application import app
 from forms import SignUpForm
 from forms import LoginForm
 
+
 @app.route('/')
 @app.route('/home', endpoint='home')
 def home():
     return render_template('home.html', title="Home")
+
 
 @app.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
@@ -15,6 +17,7 @@ def sign_up():
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home'))
     return render_template('sign_up.html', title='Sign Up', form=form)
+
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
@@ -26,6 +29,7 @@ def login():
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html', title='Login', form=form)
+
 
 @app.route('/film-reviews')
 def film_reviews():

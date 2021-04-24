@@ -24,15 +24,6 @@ section {
     color: white;
 }
 
-.carousel-caption {
-    text-align: left;
-    color: white;
-}
-
-.carousel-inner .item img {
-width: 100%; /* or width: 100% !important; */
-}
-
 /* section 1 */
 
 #home-main {
@@ -68,27 +59,27 @@ width: 100%; /* or width: 100% !important; */
 
 /* Nav bar */
 .navbar-custom: {
-color:#081127;
-background-color:#081127;
+    color:#081127;
+    background-color:#081127;
 }
 
 .navbar-custom a:{
-color:red;
+    color:red;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-color: #EC8916;
+    color: #EC8916;
 }
 
 .navbar-custom .navbar-nav .nav-link {
-color: white;
+    color: white;
 }
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link
  {
-color:#EC8916 ;
+    color:#EC8916;
 }
 .btn {
     background: #EC8916;
@@ -103,4 +94,13 @@ color:#EC8916 ;
 .footer-links li {
     list-style: none;
     color: #EC8916;
+}
+
+.form-group {
+    color: #EC8916;
+    font-family: Source Sans Pro;
+}
+
+fieldset {
+    padding: 75px;
 }
