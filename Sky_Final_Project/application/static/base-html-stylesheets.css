@@ -70,5 +70,19 @@ section {
     width: 100%;
 }
 
+/* Nav bar */
+.navbar-custom {
+    color: #ec8916;
+    background-color: #081126;
+
+.col {
+    color: white;
+    background-color: white;
+}
+}
+.navbar a {
+    color: white;
+}
+
 
 
