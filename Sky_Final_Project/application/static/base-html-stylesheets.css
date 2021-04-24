@@ -33,6 +33,18 @@ section {
 width: 100%; /* or width: 100% !important; */
 }
 
+/* section 1 */
+
+#home-main {
+    display: flex;
+}
+
+.home-main-pic {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
 /* Nav bar */
 .navbar-custom: {
 color:#081127;
