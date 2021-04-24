@@ -1,54 +1,113 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Movie Maniac</h1>
-<section id="home-main">
-    <div class="grid-container-home">
-        <div class="row" id="home-row"></div>
-            <div class="column" id="home-col">
-                <img class="home-image" src='../static/ladybird-still.jpg'>
-            </div>
-            <div class="column" id="home-col2">
-                <img class="home-image" src='../static/parasite-still.png'>
-            </div>
-            <div class="column" id="home-col3">
-                <img class="home-image" src='../static/andromeda.jpeg'>
-            </div>
-            <div class="column" id="home-col4">
-                <img class="home-image" src='../static/when-they-see-us-still.jpg'>
-            </div>
-            <div class="column" id="home-col5">
-                <img class="home-image" src='../static/shawshank-redemption-still.webp'>
-            </div>
+<!--May need to change image file paths when we make folders-->
+<!--    <div class="home-main-picture_1"></div>-->
+<!--    <div class="home-main-picture_2"></div>-->
+
+<!--This is the first section - the blog name + two images side by side + -->
+<div id="home-main">
+    <div class="home-main-pic">
+        <img src='../static/Film-Soul.jpg' width="100%" height="350px">
     </div>
+    <div class="home-main-pic">
+        <img src='../static/hunger-games.jpg' width="100%" height="350px">
+    </div>
+    <div class="home-main-pic">
+        <img src='../static/crazy-rich-asians.jpg' width="100%" height="350px">
+    </div>
+</div>
 
-</section>
-<br>
-<section>
-    <a id="review-button" href= “add-link-here” alt=“All-Reviews”>Read All Reviews</a>
-
-</section>
-<br>
-<br>
 <section id="top-rated-movies">
-            <h2>Top Rated Movies</h2>
+  <h2>Top Rated Movies</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"
 
-    <div class="grid-container">
-        <div class="row"></div>
-            <div class="column">
-                <img class="home-top-rated-image" src="../static/when-they-see-us.jpg" alt="When They See Us"
-                    width="200px" height="300px"/>
-            </div>
-            <div class="column">
-                <img class="home-top-rated-image" src="../static/parasite.jpg" alt="Parasite"
-                    width="200px" height="300px"/>
-            </div>
-            <div class="column">
-                <img class="home-top-rated-image" src="../static/ladybird.jpeg" alt="Lady Bird"
-                    width="200px" height="300px"/>
-            </div>
+                 <div id="top-rated-carousel" class="carousel slide" data-bs-ride="carousel">
+                     <div class="carousel-inner" role="listbox">
 
+                         <div class="carousel-item active">
+                            <img src="../static/parasite-still.png" class ="d-block w-100" alt="Parasite"/>
+                             <div class="carousel-caption">
+                                 <h5>Parasite (2019)</h5>
+                                 <p>Parasite follows the Kim family struggling to make ends meet until son Ki-woo comes
+                                     across an unexpected opportunity.
+                                     With no experience teaching English, he decides to accept a job tutoring Da-hye,
+                                     a daughter from the wealthy Park family.</p>
+                             </div>
+                         </div>
+
+                         <div class="carousel_item">
+                              <img src="../static/ladybird-still.jpg" class ="d-block w-100" alt="Lady Bird"/>
+                                <div class="carousel-caption">
+                                    <h5>Lady Bird (2017)</h5>
+                                    <p>A nurse works tirelessly to keep her family afloat after her husband
+                                        loses his job. She also maintains a turbulent bond with a teenage daughter who
+                                        is just like her: loving, strong-willed and deeply opinionated.</p>
+                                </div>
+                         </div>
+
+                         <div class="carousel_item">
+                              <img src="../static/when-they-see-us-still.jpg" class ="d-block w-100" alt="When They See Us"/>
+                                <div class="carousel-caption">
+                                    <h5>When They See Us (2019)</h5>
+                                    <p>Based on events of the 1989 Central Park jogger case, When They See Us explores
+                                        the lives and families of the five black male suspects who were falsely accused
+                                        then prosecuted on charges related to the rape and assault of a white woman in
+                                        Central Park, New York City.</p>
+                                </div>
+                         </div>
+
+                         <button class="carousel-control-prev" data-bs-target="#top-rated-carousel" role="button" data-slide="prev">
+                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                             <span class="visually-hidden">Previous</span>
+                         </button>
+                         <button class="carousel-control-next" data-bs-target="#top-rated-carousel" role="button" data-bs-slide="next">
+                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                             <span class="visually-hidden">Next</span>
+                         </button>
+
+                         <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#top-rated-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#top-rated-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#top-rated-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                 </div>
+                     </div>
+            </div>
+        </div>
     </div>
+
+<!--    <div class="carousel-inner">-->
+<!--      <div class="top-rated-movie">-->
+<!--        <img src="../static/when-they-see-us.jpg" alt="When They See Us" style="width:100%;">-->
+<!--      </div>-->
+
+<!--      <div class="top-rated-movie">-->
+<!--        <img src="../static/parasite.jpg" alt="Parasite" style="width:100%;">-->
+<!--      </div>-->
+
+<!--      <div class="top-rated-movie">-->
+<!--        <img src=../static/ladybird.jpeg alt="Ladybird" style="width:100%;">-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Left and right controls &ndash;&gt;-->
+<!--    <a class="left carousel-control" href="#myCarousel" data-slide="prev">-->
+<!--      <span class="glyphicon glyphicon-chevron-left"></span>-->
+<!--      <span class="sr-only">Previous</span>-->
+<!--    </a>-->
+<!--    <a class="right carousel-control" href="#myCarousel" data-slide="next">-->
+<!--      <span class="glyphicon glyphicon-chevron-right"></span>-->
+<!--      <span class="sr-only">Next</span>-->
+<!--    </a>-->
+<!--  </div>-->
 </section>
+<!--        <h3>Top Rated Movies</h3>-->
+<!--        <img class="home-top-rated-image1" src="../static/when-they-see-us.jpg" width = "100px" height="150px">-->
+<!--        <img class="home-top-rated-image2" src="../static/parasite.jpg" width = "100px" height="150px">-->
+<!--        <img class="home-top-rated-image3" src="../static/ladybird.jpeg" width = "100px" height="150px">-->
+<!--    </div>-->
 
     <br>
     <br>
@@ -93,4 +152,3 @@
     <br>
     <br>
 {% endblock content %}
-

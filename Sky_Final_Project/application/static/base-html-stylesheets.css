@@ -24,63 +24,56 @@ section {
     color: white;
 }
 
+.carousel-caption {
+    text-align: left;
+    color: white;
+}
 
-.grid-container {
+.carousel-inner .item img {
+width: 100%; /* or width: 100% !important; */
+}
+
+/* section 1 */
+
+#home-main {
     display: flex;
-    justify-content: space-around;
-    padding: 50px;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    flex:1;
-    align-items: center;
-}
-
-.grid-container-home {
-    display: flex;
-    width: 100%;
-    border: 15px solid black;
-    border-style: dashed;
-    align-items: center;
-    background-color: white;
-}
-
-.home-image {
-    width: 300px;
-    height: 200px;
-    border: 10px solid black;
-}
-
-#home-col, #home-col2, #home-col3, #home-col4, #home-col5  {
-    width: 20%;
-    align-items: center;
-    border: 5px solid black;
-    justify-content: space-evenly;
-
-}
-
-#home-row {
-    width: 100%;
+.home-main-pic {
+    width: 50%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Nav bar */
-.navbar-custom {
-    color: #ec8916;
-    background-color: #081126;
+.navbar-custom: {
+color:#081127;
+background-color:#081127;
+}
 
-.col {
-    color: white;
-    background-color: white;
+.navbar-custom a:{
+color:red;
 }
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+color: #EC8916;
 }
-.navbar a {
-    color: white;
+
+.navbar-custom .navbar-nav .nav-link {
+color: white;
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link
+ {
+color:#EC8916 ;
+}
+.btn {
+    background: #EC8916;
+    color: #081127;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
