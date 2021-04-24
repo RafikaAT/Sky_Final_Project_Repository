@@ -7,6 +7,15 @@ from application import app
 def home():
     return render_template('home.html', title="Home")
 
+@app.route('/sign-up')
+def sign_up():
+    form = SignUpForm()
+    return render_template('sign_up.html', title='Sign Up', form=form)
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Login', form=form)
 
 @app.route('/film-reviews')
 def film_reviews():

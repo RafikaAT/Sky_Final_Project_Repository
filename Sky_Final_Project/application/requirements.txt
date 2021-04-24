@@ -2,3 +2,4 @@ Flask
 jinja2
 wTForms
 flask_wtf
+flask-wtf
