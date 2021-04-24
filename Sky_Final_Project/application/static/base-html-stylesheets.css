@@ -98,3 +98,9 @@ color:#EC8916 ;
     letter-spacing: 1px;
 }
 
+/* Footer */
+
+.footer-links li {
+    list-style: none;
+    color: #EC8916;
+}
