@@ -1,6 +1,7 @@
 from flask import render_template
 from application import app
-
+from forms import SignUpForm
+from forms import LoginForm
 
 @app.route('/')
 @app.route('/home', endpoint='home')
