@@ -36,3 +36,20 @@
     color:black;
     font-family: Roboto;
 }
+
+.navbar-brand.custom{
+    color:#ec8916;
+    font-size:20px;
+
+}
+.navbar-brand.custom:hover{
+    color:white;
+
+}
+.navbar-custom {
+    color: #ec8916;
+    background-color: #081126;
+    font-size:8px;
+
+
+}
