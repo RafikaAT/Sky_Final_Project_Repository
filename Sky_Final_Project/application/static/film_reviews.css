@@ -36,3 +36,19 @@
     color:black;
     font-family: Roboto;
 }
+
+.navbar-brand.custom{
+    color:#EC8916;
+
+}
+.navbar-brand.custom:hover{
+    color:white
+}
+
+.navbar a {
+    color:white;
+}
+
+.navbar a:hover {
+    color:#EC8916;
+}
