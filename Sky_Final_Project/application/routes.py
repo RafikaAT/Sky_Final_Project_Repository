@@ -1,7 +1,7 @@
 from flask import render_template, flash, render_template, url_for, redirect
 from application import app
 from forms import SignUpForm
-from forms import LoginForm
+from forms import LoginForm, PostComment
 
 
 @app.route('/')
@@ -40,3 +40,11 @@ def film_reviews():
 def newgodsnezhareborn():
     return render_template('new-gods-nezha-reborn.html', title="New Gods: Nezha Reborn")
 
+@app.route('/comments/new',methods=['GET', 'POST'])
+# @login_required
+def new_comment():
+    form = PostComment()
+    if form.validate_on_submit():
+        flask("Your comment has been created", "success")
+        return redirect(url_for('home'))
+    return render_template('new_comment.html', title="New Comment", form=form)
