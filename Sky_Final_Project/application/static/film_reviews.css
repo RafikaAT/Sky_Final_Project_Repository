@@ -38,18 +38,17 @@
 }
 
 .navbar-brand.custom{
-    color:#ec8916;
-    font-size:20px;
+    color:#EC8916;
 
 }
 .navbar-brand.custom:hover{
-    color:white;
-
+    color:white
 }
-.navbar-custom {
-    color: #ec8916;
-    background-color: #081126;
-    font-size:8px;
 
+.navbar a {
+    color:white;
+}
 
+.navbar a:hover {
+    color:#EC8916;
 }

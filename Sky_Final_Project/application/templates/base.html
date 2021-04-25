@@ -25,16 +25,17 @@
 
 <nav class="navbar navbar-expand-lg navbar-custom>
   <div class="container-fluid">
-    <a class="navbar-brand custom" href="#">Login</a>
+    <a class="navbar-brand custom" href="{{ url_for('login') }}"> Login</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-       <a class="nav-link active" href="{{ url_for('film_reviews') }}"> Film Reviews <span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="{{ url_for('login') }}"> Login</a>
-        <a class="nav-link" href="{{ url_for('sign_up') }}"> Sign Up</a>
+    <div class="navbar-nav custom">
+        <a class="nav-link" href="{{ url_for('home') }}"> Home</a>
+        <a class="nav-link active" href="{{ url_for('film_reviews') }}"> Film Reviews <span class="sr-only">(current)</span></a>
         <a class="nav-link" href="{{ url_for('newgodsnezhareborn') }}"> New Gods</a>
+        <a class="nav-link" href="{{ url_for('sign_up') }}"> Sign Up</a>
+
     </div>
 </div>
 </nav>
