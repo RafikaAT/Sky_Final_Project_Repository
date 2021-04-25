@@ -7,7 +7,6 @@ from forms import LoginForm, PostComment
 
 
 
-
 @app.route('/')
 @app.route('/home', endpoint='home')
 def home():

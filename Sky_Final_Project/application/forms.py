@@ -4,12 +4,9 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
 from flask_sqlalchemy import SQLAlchemy
 from wtforms.validators import DataRequired, Length, Email, EqualTo
-from application import app
+from application import db
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'e3c56yt2bof7'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-db = SQLAlchemy(app)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
