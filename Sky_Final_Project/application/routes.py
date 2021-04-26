@@ -45,6 +45,6 @@ def newgodsnezhareborn():
 def new_comment():
     form = PostComment()
     if form.validate_on_submit():
-        flash("Your comment has been created", "success")
+        flash("Your comment has been sent to the authors for review", "success")
         return redirect(url_for('home'))
     return render_template('new_comment.html', title="New Comment", form=form)
