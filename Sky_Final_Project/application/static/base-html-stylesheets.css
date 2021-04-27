@@ -118,5 +118,22 @@ fieldset {
     margin-right: 150px;
 }
 
+.flex-container {
+  display: flex;
 
+}
 
+.flex-container > div {
+  font-size: 15px;
+}
+.repair_button{
+   background:orange;
+   color:#081127
+  border: none;
+  padding: 10px;
+  border:20px;
+  font: inherit;
+  border-radius: 4px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}

@@ -43,5 +43,5 @@ class LoginForm(FlaskForm):
 class PostComment(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
     content = TextAreaField('Comment', validators=[DataRequired()])
-    submit = SubmitField("Add a comment")
+    submit = SubmitField("Submit")
 
