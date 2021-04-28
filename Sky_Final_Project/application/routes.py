@@ -17,9 +17,10 @@ def sign_up():
     form = SignUpForm()
     username = form.username.data
     email = form.email.data
+    password = form.password.data
 
     if request.method == 'POST' and form.validate_on_submit():
-        user = User(username=username, email=email)
+        user = User(username=username, email=email, password=password)
         db.session.add(user)
         db.session.commit()
 
