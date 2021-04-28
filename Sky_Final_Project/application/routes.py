@@ -1,8 +1,9 @@
-from flask import flash, render_template, url_for, redirect
+from flask import flash, render_template, url_for, redirect, request
 from application import app
 from forms import SignUpForm
 from forms import LoginForm, PostComment
-from models import User, Post
+from models import User
+from application import db
 
 
 @app.route('/')
@@ -14,7 +15,14 @@ def home():
 @app.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     form = SignUpForm()
-    if form.validate_on_submit():
+    username = form.username.data
+    email = form.email.data
+
+    if request.method == 'POST' and form.validate_on_submit():
+        user = User(username=username, email=email)
+        db.session.add(user)
+        db.session.commit()
+
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home'))
     return render_template('sign_up.html', title='Sign Up', form=form)
