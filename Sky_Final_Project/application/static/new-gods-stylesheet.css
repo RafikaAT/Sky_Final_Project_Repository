@@ -9,14 +9,27 @@ body {
     color: #EC8916;
 }
 
+.new-gods-review-container {
+    display: flex;
+    justify-content: center;
+}
+
 .new-gods-review {
     display: flex-inline;
     justify-content: center;
     color: #A1A1A1;
+    border: white 1px solid;
+    width: 100%;
+
 }
 
+@media screen and (min-width: 600px) {
+  .new-gods-review {width: 70%;}
+}
+
+
 .new-gods-review p {
-    margin: 0px 60px;
+    text-align: left;
 }
 
 div.review-image-center {
