@@ -70,30 +70,6 @@ def newgodsnezhareborn():
     return render_template('new-gods-nezha-reborn.html', title="New Gods: Nezha Reborn")
 
 
-# @app.route('/comments/new',methods=['GET', 'POST'])
-# # @login_required
-# def new_comment():
-#     form = PostComment()
-#     if form.validate_on_submit():
-#         flash("Your comment has been sent to the authors for review", "success")
-#         return redirect(url_for('home'))
-#     return render_template('new_comment.html', title="New Comment", form=form)
-
-# @app.route('/comments/new',methods=['GET', 'POST'])
-# # @login_required
-# def new_comment():
-#     form = PostComment()
-#     if request.method=='POST' and form.validate_on_submit():
-#         title = request.form.get('title')
-#         content = request.form.get('content')
-#         db.session.add(user)
-#         db.session.commit()
-#
-#         flash("Your comment has been sent to the authors for review", "success")
-#         return redirect(url_for('home'))
-#     return render_template('new_comment.html', title="New Comment", form=form)
-
-
 @app.route('/comments/new', methods=['GET', 'POST'])
 # @login_required
 def new_comment():
