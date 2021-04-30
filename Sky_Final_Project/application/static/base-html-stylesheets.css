@@ -24,6 +24,10 @@ section {
     color: white;
 }
 
+.orange-color {
+    color: #EC8916 !important;
+}
+
 /* section 1 */
 
 #home-main {
