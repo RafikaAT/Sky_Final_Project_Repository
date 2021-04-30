@@ -32,8 +32,11 @@ def sign_up():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
-    if form.validate_on_submit():
-        if form.email.data == 'admin@blog.com' and form.password.data == 'password':
+    email = request.form['email']
+    password = request.form['password']
+    if form.validate_on_submit() and request.method == 'POST':
+        User.query.all()
+        if form.email.data == email and form.password.data == password:
             flash('You have been logged in!', 'success')
             return redirect(url_for('home'))
         else:
