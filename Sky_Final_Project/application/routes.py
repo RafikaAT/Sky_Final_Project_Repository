@@ -71,7 +71,7 @@ def newgodsnezhareborn():
 
 
 @app.route('/comments/new', methods=['GET', 'POST'])
-# @login_required
+@login_required
 def new_comment():
     form = PostComment()
     title = form.title.data #this and comment may have to be written with C and T.
