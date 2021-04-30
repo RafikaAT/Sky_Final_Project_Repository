@@ -4,7 +4,7 @@ from forms import SignUpForm
 from forms import LoginForm, PostComment
 from models import User
 from application import db, bcrypt
-from flask_login import login_user
+from flask_login import login_user, current_user
 
 
 @app.route('/')
@@ -15,6 +15,8 @@ def home():
 
 @app.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = SignUpForm()
     username = form.username.data
     email = form.email.data
@@ -33,6 +35,8 @@ def sign_up():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
