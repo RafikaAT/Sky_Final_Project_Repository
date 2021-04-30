@@ -94,7 +94,7 @@ def newgodsnezhareborn():
 #     return render_template('new_comment.html', title="New Comment", form=form)
 
 
-@app.route('/comments/new',methods=['GET', 'POST'])
+@app.route('/comments/new', methods=['GET', 'POST'])
 # @login_required
 def new_comment():
     form = PostComment()
