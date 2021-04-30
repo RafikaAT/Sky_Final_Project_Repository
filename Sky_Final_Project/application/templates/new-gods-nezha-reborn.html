@@ -1,42 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/new-gods-stylesheet.css">
-    <title>New Gods: Nezha Reborn Review</title>
-</head>
 <body>
     <div class="new-gods-intro">
         <h1>New Gods: Nezha Reborn (2021)</h1>
     </div>
-    <div class="new-gods-review">
-        <div class="review-image-center">
-            <img src="../static/nezha-reborn-img1.jpeg" alt="">
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Condimentum vitae sapien pellentesque habitant morbi. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Sed felis eget velit aliquet sagittis id. Convallis tellus id interdum velit laoreet id donec. Consequat mauris nunc congue nisi vitae. Nunc congue nisi vitae suscipit tellus mauris a. Dis parturient montes nascetur ridiculus mus mauris vitae. Adipiscing at in tellus integer feugiat. Amet porttitor eget dolor morbi non arcu. Aenean pharetra magna ac placerat vestibulum lectus. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Netus et malesuada fames ac.</p>
-        <br>
-        <p>Leo urna molestie at elementum eu facilisis sed. Et leo duis ut diam quam. Sit amet nisl suscipit adipiscing bibendum est ultricies. Justo nec ultrices dui sapien eget mi proin. Sed euismod nisi porta lorem mollis aliquam ut porttitor. In nibh mauris cursus mattis molestie a. Eget nullam non nisi est sit amet. Nunc sed id semper risus in hendrerit. Pharetra sit amet aliquam id diam maecenas ultricies. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Amet purus gravida quis blandit turpis cursus. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in.</p>
-        <div class="review-image-center">
-            <img src="../static/nezha-reborn-img3.jpeg" alt="">
-        </div>
-        <p>In fermentum posuere urna nec. Dignissim sodales ut eu sem integer vitae justo eget magna. Odio morbi quis commodo odio aenean sed adipiscing. Bibendum arcu vitae elementum curabitur vitae. Lectus sit amet est placerat in. Felis imperdiet proin fermentum leo vel orci porta. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Quam vulputate dignissim suspendisse in est ante in. Accumsan in nisl nisi scelerisque eu ultrices. Semper risus in hendrerit gravida rutrum quisque non. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Aliquet eget sit amet tellus cras adipiscing enim eu. At auctor urna nunc id cursus metus aliquam.</p>
-        <br>
-        <p>Risus at ultrices mi tempus. Nec feugiat in fermentum posuere urna nec. Sem integer vitae justo eget magna fermentum iaculis. Sed egestas egestas fringilla phasellus. Urna et pharetra pharetra massa massa. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Risus nullam eget felis eget nunc lobortis. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Non consectetur a erat nam at lectus urna duis. Facilisis magna etiam tempor orci eu. Enim eu turpis egestas pretium aenean pharetra magna ac. Diam sit amet nisl suscipit adipiscing bibendum. Ultrices dui sapien eget mi proin sed libero. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Aliquet risus feugiat in ante metus dictum at tempor. In tellus integer feugiat scelerisque varius morbi. Porta nibh venenatis cras sed felis eget. Aenean vel elit scelerisque mauris pellentesque pulvinar. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis.</p>
-    </div>
-
-  <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Leave a comment</button></a>
-</form>
-    <div class="watch-new-gods-trailer">
-        <p>Watch trailer</p>
-        <iframe width="620" height="345"
-                src="https://www.youtube.com/embed/4_FvK9FUG2I"></iframe>
-    </div>
-    <div class="comment-section">
-        <p>Leave a reply</p>
-    </div>
-    <div class="other-reviews">
+    <div class="new-gods-review-container">
+        <div class="new-gods-review">
+            <div class="review-image-center">
+                <img src="../static/nezha-reborn-img1.jpeg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Condimentum vitae sapien pellentesque habitant morbi. Pulvinar sapien et ligula ullamcorper malesuada proin libero. Sed felis eget velit aliquet sagittis id. Convallis tellus id interdum velit laoreet id donec. Consequat mauris nunc congue nisi vitae. Nunc congue nisi vitae suscipit tellus mauris a. Dis parturient montes nascetur ridiculus mus mauris vitae. Adipiscing at in tellus integer feugiat. Amet porttitor eget dolor morbi non arcu. Aenean pharetra magna ac placerat vestibulum lectus. Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Netus et malesuada fames ac.</p>
+            <br>
+            <p>Leo urna molestie at elementum eu facilisis sed. Et leo duis ut diam quam. Sit amet nisl suscipit adipiscing bibendum est ultricies. Justo nec ultrices dui sapien eget mi proin. Sed euismod nisi porta lorem mollis aliquam ut porttitor. In nibh mauris cursus mattis molestie a. Eget nullam non nisi est sit amet. Nunc sed id semper risus in hendrerit. Pharetra sit amet aliquam id diam maecenas ultricies. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Amet purus gravida quis blandit turpis cursus. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in.</p>
+            <div class="review-image-center">
+                <img src="../static/nezha-reborn-img3.jpeg" alt="">
+            </div>
+            <p>In fermentum posuere urna nec. Dignissim sodales ut eu sem integer vitae justo eget magna. Odio morbi quis commodo odio aenean sed adipiscing. Bibendum arcu vitae elementum curabitur vitae. Lectus sit amet est placerat in. Felis imperdiet proin fermentum leo vel orci porta. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Quam vulputate dignissim suspendisse in est ante in. Accumsan in nisl nisi scelerisque eu ultrices. Semper risus in hendrerit gravida rutrum quisque non. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Aliquet eget sit amet tellus cras adipiscing enim eu. At auctor urna nunc id cursus metus aliquam.</p>
+            <br>
+            <p>Risus at ultrices mi tempus. Nec feugiat in fermentum posuere urna nec. Sem integer vitae justo eget magna fermentum iaculis. Sed egestas egestas fringilla phasellus. Urna et pharetra pharetra massa massa. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Risus nullam eget felis eget nunc lobortis. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Non consectetur a erat nam at lectus urna duis. Facilisis magna etiam tempor orci eu. Enim eu turpis egestas pretium aenean pharetra magna ac. Diam sit amet nisl suscipit adipiscing bibendum. Ultrices dui sapien eget mi proin sed libero. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Aliquet risus feugiat in ante metus dictum at tempor. In tellus integer feugiat scelerisque varius morbi. Porta nibh venenatis cras sed felis eget. Aenean vel elit scelerisque mauris pellentesque pulvinar. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis.</p>
+            <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Leave a comment</button></a>
+            <div class="watch-new-gods-trailer">
+                <p>Watch trailer</p>
+                <iframe width="620" height="345" src="https://www.youtube.com/embed/4_FvK9FUG2I"></iframe>
+            </div>
+                <div class="other-reviews">
         <div class="other-reviews-film">
             <img src="../static/the-boy-image.jpg" alt="" width = "100px" height="150px">
             <p>Movie review</p>
@@ -55,6 +42,12 @@
         </div>
 
     </div>
+        </div>
+    </div>
+
+
+
+
+
 </body>
 {% endblock %}
-</html>
