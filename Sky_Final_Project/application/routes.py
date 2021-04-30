@@ -4,7 +4,7 @@ from forms import SignUpForm
 from forms import LoginForm, PostComment
 from models import User
 from application import db, bcrypt
-from flask_login import login_user, current_user
+from flask_login import login_user, current_user, logout_user
 
 
 @app.route('/')
@@ -47,6 +47,10 @@ def login():
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
 
+@app.route("/logout")
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 @app.route('/film-reviews')
 def film_reviews():
