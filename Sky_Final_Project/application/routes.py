@@ -1,9 +1,9 @@
 from flask import flash, render_template, url_for, redirect, request
-from application import app
+from application import app, db, bcrypt
 from forms import SignUpForm
 from forms import LoginForm, PostComment
 from models import User
-from application import db
+from application import db, bcrypt
 
 
 @app.route('/')
@@ -20,12 +20,13 @@ def sign_up():
     password = form.password.data
 
     if request.method == 'POST' and form.validate_on_submit():
-        user = User(username=username, email=email, password=password)
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=username, email=email, password=hashed_password)
         db.session.add(user)
         db.session.commit()
 
         flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('home'))
+        return redirect(url_for('login'))
     return render_template('sign_up.html', title='Sign Up', form=form)
 
 

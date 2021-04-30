@@ -1,6 +1,7 @@
 import app as app
 from flask import Flask, render_template, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 from application import app
 
 username = 'newuser'
@@ -18,5 +19,5 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 db = SQLAlchemy(app)
-
+bcrypt = Bcrypt(app)
 from application import routes

@@ -30,6 +30,9 @@ body {
 
 .new-gods-review p {
     text-align: left;
+    max-width: 100ch;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.review-image-center {

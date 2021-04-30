@@ -5,3 +5,4 @@ flask_wtf
 flask-wtf
 email_validator
 pymysql
+flask-bcrypt
