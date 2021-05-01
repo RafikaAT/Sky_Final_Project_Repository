@@ -67,7 +67,8 @@ def film_reviews():
 
 @app.route('/new-gods-nezha-reborn')
 def newgodsnezhareborn():
-    return render_template('new-gods-nezha-reborn.html', title="New Gods: Nezha Reborn")
+    posts = Post.query.all()
+    return render_template('new-gods-nezha-reborn.html', title="New Gods: Nezha Reborn", posts=posts)
 
 
 # @app.route('/comments/new',methods=['GET', 'POST'])
@@ -79,18 +80,23 @@ def newgodsnezhareborn():
 #         return redirect(url_for('home'))
 #     return render_template('new_comment.html', title="New Comment", form=form)
 
-# @app.route('/comments/new',methods=['GET', 'POST'])
-# # @login_required
+
+# @app.route('/comments/new', methods=['GET', 'POST'])
+# @login_required
 # def new_comment():
 #     form = PostComment()
-#     if request.method=='POST' and form.validate_on_submit():
-#         title = request.form.get('title')
-#         content = request.form.get('content')
-#         db.session.add(user)
-#         db.session.commit()
-#
-#         flash("Your comment has been sent to the authors for review", "success")
-#         return redirect(url_for('home'))
+#     title = form.title.data #this and comment may have to be written with C and T.
+#     comment = form.content.data
+#     user_id = current_user.id
+#     if request.method =='POST' and form.validate_on_submit():
+#         comment = Post(title=title, content=comment, user_id=user_id)
+#         if current_user.is_authenticated:
+#             db.session.add(comment)
+#             db.session.commit()
+#             flash("Your comment has been sent to the authors for review", "success")
+#         else:
+#             flash("You must be a member to comment on a post.")
+#             return redirect(url_for('sign_up'))
 #     return render_template('new_comment.html', title="New Comment", form=form)
 
 
@@ -98,16 +104,11 @@ def newgodsnezhareborn():
 @login_required
 def new_comment():
     form = PostComment()
-    title = form.title.data #this and comment may have to be written with C and T.
-    comment = form.content.data
-    user_id = current_user.id
-    if request.method =='POST' and form.validate_on_submit():
-        comment = Post(title=title, content=comment, user_id=user_id)
+    if request.method == 'POST' and form.validate_on_submit():
+        comment = Post(title=form.title.data, content=form.content.data, author=current_user)
         if current_user.is_authenticated:
             db.session.add(comment)
             db.session.commit()
             flash("Your comment has been sent to the authors for review", "success")
-        else:
-            flash("You must be a member to comment on a post.")
-            return redirect(url_for('sign_up'))
+            return redirect(url_for('newgodsnezhareborn')) #This will have to be changed into whichever page's comment we're on.
     return render_template('new_comment.html', title="New Comment", form=form)
