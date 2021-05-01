@@ -38,13 +38,6 @@ def login():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
-    email = request.form['email']
-    password = request.form['password']
-    if form.validate_on_submit() and request.method == 'POST':
-        User.query.all()
-        if form.email.data == email and form.password.data == password:
-            flash('You have been logged in!', 'success')
-            return redirect(url_for('home'))
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
@@ -67,7 +60,6 @@ def logout():
 def account():
     return render_template('account.html', title='Account')
 
-
 @app.route('/film-reviews')
 def film_reviews():
     return render_template('film_reviews.html', title="film-reviews")
@@ -77,36 +69,6 @@ def film_reviews():
 def newgodsnezhareborn():
     posts = Post.query.all()
     return render_template('new-gods-nezha-reborn.html', title="New Gods: Nezha Reborn", posts=posts)
-
-
-# @app.route('/comments/new',methods=['GET', 'POST'])
-# # @login_required
-# def new_comment():
-#     form = PostComment()
-#     if form.validate_on_submit():
-#         flash("Your comment has been sent to the authors for review", "success")
-#         return redirect(url_for('home'))
-#     return render_template('new_comment.html', title="New Comment", form=form)
-
-
-# @app.route('/comments/new', methods=['GET', 'POST'])
-# @login_required
-# def new_comment():
-#     form = PostComment()
-#     title = form.title.data #this and comment may have to be written with C and T.
-#     comment = form.content.data
-#     user_id = current_user.id
-#     if request.method =='POST' and form.validate_on_submit():
-#         comment = Post(title=title, content=comment, user_id=user_id)
-#         if current_user.is_authenticated:
-#             db.session.add(comment)
-#             db.session.commit()
-#             flash("Your comment has been sent to the authors for review", "success")
-#         else:
-#             flash("You must be a member to comment on a post.")
-#             return redirect(url_for('sign_up'))
-#     return render_template('new_comment.html', title="New Comment", form=form)
-
 
 
 @app.route('/comments/new', methods=['GET', 'POST'])
