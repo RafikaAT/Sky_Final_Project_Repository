@@ -31,29 +31,29 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-custom>
+<nav class="navbar navbar-expand-lg navbar-custom">
   <div class="container-fluid">
     <a class="navbar-brand custom" href="{{ url_for('home') }}">Home</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-
-</button>
-<div class="flex-container">
-<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav custom">
-       <div> <a class="nav-link active" href="{{ url_for('film_reviews') }}"> Film Reviews <span class="sr-only">(current)</span></a></div>
-        <div><a class="nav-link" href="{{ url_for('newgodsnezhareborn') }}"> New Gods</a></div>
-<!--        <div><a class="nav-link" href="{{ url_for('new_comment') }}"> Comment</a></div>-->
-            {% if current_user.is_authenticated %}
-                <div><a class="nav-link" href="{{ url_for('account') }}">Account</a></div>
-                <div><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></div>
-            {% else %}
-                <div><a class="nav-link" href="{{ url_for('sign_up') }}"> Sign Up</a></div>
-                <div><a class="nav-link" href="{{ url_for('login') }}"> Log In</a></div>
-            {% endif %}
- </div>
-   </div>
-</div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="flex-container">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav custom">
+           <div> <a class="nav-link active" href="{{ url_for('film_reviews') }}"> Film Reviews <span class="sr-only">(current)</span></a></div>
+            <div><a class="nav-link" href="{{ url_for('newgodsnezhareborn') }}"> New Gods</a></div>
+    <!--        <div><a class="nav-link" href="{{ url_for('new_comment') }}"> Comment</a></div>-->
+                {% if current_user.is_authenticated %}
+                    <div><a class="nav-link" href="{{ url_for('account') }}">Account</a></div>
+                    <div><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></div>
+                {% else %}
+                    <div><a class="nav-link" href="{{ url_for('sign_up') }}"> Sign Up</a></div>
+                    <div><a class="nav-link" href="{{ url_for('login') }}"> Log In</a></div>
+                {% endif %}
+       </div>
+    </div>
+    </div>
+  </div>
 </nav>
 <!--Navbar ends here-->
 
@@ -95,6 +95,7 @@
             </ul>
              <div>
                 <p>All Rights Reserved &copy; 2021 Movie Maniac</p>
+            </div>
             </div>
         </footer>
 

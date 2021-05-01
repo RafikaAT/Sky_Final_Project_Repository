@@ -18,7 +18,14 @@
             <p>In fermentum posuere urna nec. Dignissim sodales ut eu sem integer vitae justo eget magna. Odio morbi quis commodo odio aenean sed adipiscing. Bibendum arcu vitae elementum curabitur vitae. Lectus sit amet est placerat in. Felis imperdiet proin fermentum leo vel orci porta. Tempus urna et pharetra pharetra massa massa ultricies mi quis. Quam vulputate dignissim suspendisse in est ante in. Accumsan in nisl nisi scelerisque eu ultrices. Semper risus in hendrerit gravida rutrum quisque non. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Aliquet eget sit amet tellus cras adipiscing enim eu. At auctor urna nunc id cursus metus aliquam.</p>
             <br>
             <p>Risus at ultrices mi tempus. Nec feugiat in fermentum posuere urna nec. Sem integer vitae justo eget magna fermentum iaculis. Sed egestas egestas fringilla phasellus. Urna et pharetra pharetra massa massa. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Risus nullam eget felis eget nunc lobortis. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Non consectetur a erat nam at lectus urna duis. Facilisis magna etiam tempor orci eu. Enim eu turpis egestas pretium aenean pharetra magna ac. Diam sit amet nisl suscipit adipiscing bibendum. Ultrices dui sapien eget mi proin sed libero. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Aliquet risus feugiat in ante metus dictum at tempor. In tellus integer feugiat scelerisque varius morbi. Porta nibh venenatis cras sed felis eget. Aenean vel elit scelerisque mauris pellentesque pulvinar. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis.</p>
-            <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Leave a comment</button></a>
+            {% for post in posts %}
+                <h6>{{ post.title }}</h6>
+                <p>By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }} </p>
+                <p> {{ post.content }}</p>
+            {% endfor %}
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Leave a comment</button></a>
+            {% endif %}
             <div class="watch-new-gods-trailer">
                 <p>Watch trailer</p>
                 <iframe width="620" height="345" src="https://www.youtube.com/embed/4_FvK9FUG2I"></iframe>

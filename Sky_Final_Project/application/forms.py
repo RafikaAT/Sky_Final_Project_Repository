@@ -2,6 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from models import User
+from flask_login import current_user
 
 
 class SignUpForm(FlaskForm):
@@ -35,4 +36,6 @@ class PostComment(FlaskForm):
     submit = SubmitField("Submit")
 
 
-
+    # def user_logged_out(self):
+    #     if not current_user.is_authenticated:
+    #         raise ValidationError("You must be logged in to leave a comment.")
