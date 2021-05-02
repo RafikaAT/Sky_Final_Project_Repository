@@ -6,6 +6,7 @@
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">New Comment</legend>
                 <div class="form-group">
+<!--                    Here we need to input the form that allows for the user to insert an image into the form-->
                     {{ form.title.label(class="form-control-label") }}
                     {% if form.title.errors %}
                         {{ form.title(class="form-control form-control-lg is-invalid") }}
@@ -18,6 +19,21 @@
                         {{ form.title(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
+                <div class="form-group">
+                    {{ form.snippet.label(class="form-control-label") }}
+                    {% if form.snippet.errors %}
+                        {{ form.snippet(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.snippet.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.snippet(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
                 <div class="form-group">
                     {{ form.content.label(class="form-control-label") }}
                     {% if form.content.errors %}
@@ -31,6 +47,7 @@
                         {{ form.content(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
               </fieldset>
             <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}

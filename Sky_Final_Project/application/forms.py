@@ -1,4 +1,5 @@
 from flask_wtf import FlaskForm
+# from flask_wtf.file import FileField, FileAllowed #For Images Folder
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from models import User
@@ -32,6 +33,7 @@ class LoginForm(FlaskForm):
 
 class PostComment(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
+    snippet = TextAreaField('Snippet', validators=[DataRequired()])
     content = TextAreaField('Comment', validators=[DataRequired()])
     submit = SubmitField("Submit")
 

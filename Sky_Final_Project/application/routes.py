@@ -58,16 +58,20 @@ def logout():
 @app.route("/account")
 @login_required
 def account():
-    return render_template('account.html', title='Account')
+    # posts = Post.query.filter_by(author=form.current_user.data)
+    # posts = Post.query.filter_by(user_id=current_user.id).all()
+    posts = Post.query.filter_by(user_id=current_user.id)
+    return render_template('account.html', title='Your Posts', posts=posts)
 
 @app.route('/film-reviews')
 def film_reviews():
-    return render_template('film_reviews.html', title="film-reviews")
+    posts = Post.query.all()
+    return render_template('film_reviews.html', title="film-reviews", posts=posts)
 
 
 @app.route('/new-gods-nezha-reborn')
 def newgodsnezhareborn():
-    posts = Post.query.all()
+    posts = Post.query.current_user()  #HERE
     return render_template('new-gods-nezha-reborn.html', title="New Gods: Nezha Reborn", posts=posts)
 
 
@@ -76,10 +80,18 @@ def newgodsnezhareborn():
 def new_comment():
     form = PostComment()
     if request.method == 'POST' and form.validate_on_submit():
-        comment = Post(title=form.title.data, content=form.content.data, author=current_user)
+        comment = Post(title=form.title.data, snippet=form.snippet.data, content=form.content.data, author=current_user)
         if current_user.is_authenticated:
             db.session.add(comment)
             db.session.commit()
             flash("Your comment has been sent to the authors for review", "success")
-            return redirect(url_for('newgodsnezhareborn')) #This will have to be changed into whichever page's comment we're on.
+            return redirect(url_for('home')) #This will have to be changed into whichever page's comment we're on.
     return render_template('new_comment.html', title="New Comment", form=form)
+
+
+@app.route('/comments/<int:comment_id>')
+def blogreview(comment_id):
+    post = Post.query.get_or_404(comment_id)
+    # image_file_review = url_for('/static/', filename=f'review_images/{post.image_file_review}')
+    # image_file_review=(url_for('static', filename='review_images/' + comment_id.image_file_review)) #ALSO add IMAGE FILE REVIEW BELOW
+    return render_template('blogpost.html', title=post.title, review=post.content, post=post)

@@ -41,6 +41,7 @@ div.review-image-center {
     width: 100%;
     height: 400px;
     margin: 20px 0px;
+    /*border: 1px solid red;*/
 }
 
 div.comment-section {
