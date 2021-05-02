@@ -39,3 +39,20 @@ class PostComment(FlaskForm):
     # def user_logged_out(self):
     #     if not current_user.is_authenticated:
     #         raise ValidationError("You must be logged in to leave a comment.")
+
+class SignUpForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(min=3, max=15)])
+    email = StringField('Email Address', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=6, max=20)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min=6, max=20), EqualTo('password')])
+    submit = SubmitField('Sign Up')
+
+    def validate_username(self, username):
+        user = User.query.filter_by(username=username.data).first()
+        if user:
+            raise ValidationError(f'{username.data} username is taken. Please choose a different one')
+
+    def validate_email(self, email):
+        user = User.query.filter_by(email=email.data).first()
+        if user:
+            raise ValidationError(f'{email.data} email is taken. Please choose a different one')

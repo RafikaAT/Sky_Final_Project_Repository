@@ -6,8 +6,8 @@ db.create_all()
 
 # input sample data here
 
-test_user_1 = User(username='amberleeshand',
-                   email='amberleeshand@gmail.com')
+test_user_1 = User(username='amberleeshand2',
+                   email='amberlee2shand@gmail.com', image_file='')
 
 # add and commit sample data to db here
 db.session.add(test_user_1)
