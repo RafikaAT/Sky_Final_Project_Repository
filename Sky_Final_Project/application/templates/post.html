@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block content %}
+  <h6>{{ post.title }}</h6>
+      <p>By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+      <p> {{ post.content }}</p>
+    {% if post.author == current_user %}
+        <button class="btn btn-info btn-sm m-1"><a href="{{url_for('update_post', comment_id=post.id)}}">Edit Review</a></button>
+        <br>
+        <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete Review</button>
+    {% endif %}
+    {% if post.author == current_user %}
+    {% endif %}
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="deleteModalLabel">Are you sure you want to delete this review?</h3>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+            <div class="modal-body">This action cannot be undone.
+
+            </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-sm m-1" data-dismiss="modal">Close</button>
+              <form action="{{url_for('delete_post', comment_id=post.id)}}", method="POST">
+                  <input class="btn btn-danger btn-sm m1" type="submit" value="Delete">
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock content %}

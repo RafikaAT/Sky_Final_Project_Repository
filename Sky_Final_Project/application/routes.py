@@ -45,7 +45,7 @@ def login():
             next_page = request.args.get('next')
             return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
-            flash('Login Unsuccessful. Please check email and password', 'danger')
+            flash('Login unsuccessful. Please check email and password.', 'danger')
     return render_template('login.html', title='Login', form=form)
 
 
@@ -80,18 +80,56 @@ def newgodsnezhareborn():
 def new_comment():
     form = PostComment()
     if request.method == 'POST' and form.validate_on_submit():
-        comment = Post(title=form.title.data, snippet=form.snippet.data, content=form.content.data, author=current_user)
+        comment = Post(title=form.title.data, content=form.content.data, author=current_user)
         if current_user.is_authenticated:
             db.session.add(comment)
             db.session.commit()
-            flash("Your comment has been sent to the authors for review", "success")
+            flash("Your review has been posted!", "success")
             return redirect(url_for('home')) #This will have to be changed into whichever page's comment we're on.
-    return render_template('new_comment.html', title="New Comment", form=form)
+    return render_template('new_comment.html', title="New Review", form=form, legend='New Review')
 
 
 @app.route('/comments/<int:comment_id>')
 def blogreview(comment_id):
     post = Post.query.get_or_404(comment_id)
     # image_file_review = url_for('/static/', filename=f'review_images/{post.image_file_review}')
-    # image_file_review=(url_for('static', filename='review_images/' + comment_id.image_file_review)) #ALSO add IMAGE FILE REVIEW BELOW
+    # image_file_review=(url_for('static', filename=# image_file_review = url_for('/static/', filename=f'review_images/{post.image_file_review}')
+    #     # image_file_review=(url_for('static', filename='review_images/' + comment_id.image_file_review)'review_images/' + comment_id.image_file_review)) #ALSO add IMAGE FILE REVIEW BELOW
     return render_template('blogpost.html', title=post.title, review=post.content, post=post)
+
+
+@app.route('/film-reviews/<int:comment_id>')
+def post(comment_id):
+    post = Post.query.get_or_404(comment_id)
+    return render_template('post.html', title=post.title, post=post)
+
+
+@app.route("/film-reviews/update/<int:comment_id>", methods=['GET', 'POST'])
+@login_required
+def update_post(comment_id):
+    post = Post.query.get_or_404(comment_id)
+    form = PostComment()
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.content = form.content.data
+        db.session.commit()
+        flash('Your review has been updated!', 'success')
+        return redirect(url_for('blogreview', comment_id=post.id))
+    elif request.method == 'GET':
+        form.title.data = post.title
+        form.content.data = post.content
+    return render_template('new_comment.html', title='Edit Review', form=form, legend='Edit Review')
+
+
+@app.route("/film-reviews/delete/<int:comment_id>", methods=['POST'])
+@login_required
+def delete_post(comment_id):
+    post = Post.query.get_or_404(comment_id)
+    db.session.delete(post)
+    db.session.commit()
+    flash('Your post has been deleted.', 'danger')
+    return redirect(url_for('home'))
+
+
+
+

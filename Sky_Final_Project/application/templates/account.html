@@ -3,9 +3,10 @@
     <h1>{{ current_user.username }}</h1>
     <h2>Your Blog Posts</h2>
     {% for post in posts %}
-        <h3>{{ post.title }}</h3>
-        <p> {{ post.snippet }} </p>
+        <h3><a href="{{ url_for('post', comment_id=post.id)}}">{{ post.title }}</a></h3>
+        <p> {{ post.content | truncate(400) }} </p>
     {% endfor %}
 <!--    <p>{{ posts.content }}</p>-->
-    <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Post a Review</button></a>
+        <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Post a Review</button></a>
 {% endblock content %}
+

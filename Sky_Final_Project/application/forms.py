@@ -33,7 +33,6 @@ class LoginForm(FlaskForm):
 
 class PostComment(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
-    snippet = TextAreaField('Snippet', validators=[DataRequired()])
     content = TextAreaField('Comment', validators=[DataRequired()])
     submit = SubmitField("Submit")
 

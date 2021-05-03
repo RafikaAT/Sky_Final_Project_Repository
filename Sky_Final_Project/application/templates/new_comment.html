@@ -4,7 +4,7 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">New Comment</legend>
+                <legend class="border-bottom mb-4">{{ legend }}</legend>
                 <div class="form-group">
 <!--                    Here we need to input the form that allows for the user to insert an image into the form-->
                     {{ form.title.label(class="form-control-label") }}
@@ -17,20 +17,6 @@
                         </div>
                     {% else %}
                         {{ form.title(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-
-                <div class="form-group">
-                    {{ form.snippet.label(class="form-control-label") }}
-                    {% if form.snippet.errors %}
-                        {{ form.snippet(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.snippet.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.snippet(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
 
