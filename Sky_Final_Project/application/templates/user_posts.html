@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Posts by {{ user.username }} ({{ posts.total }})</h1>
+    {% for post in posts.items %}
+        <br>
+        <div class="account-blog-posts-overall">
+            <div class="account-column">
+                <img class="account-default-image" src="../static/movie_maniac.png" alt="default image message">
+            </div>
+            <div class="account-column">
+                <h4 class="within-block-account-blogpost"><a href="{{ url_for('post', comment_id=post.id)}}">{{ post.title }}</a></h4>
+                <p class="within-block-account-blogpost">{{ post.date_posted.strftime('%Y-%m-%d') }} at {{ post.date_posted.strftime('%H:%M') }}</p>
+                <p class="within-block-account-blogpost"> {{ post.content | truncate(400) }} </p>
+            </div>
+        </div>
+    {% endfor %}
+    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if page_num %}
+            {% if posts.page == page_num %}
+                <a class="page-numbers-current" href="{{ url_for('username_post',username=user.username, page=page_num) }}"> {{ page_num }} </a>
+            {% else %}
+                <a class="page-numbers" href="{{ url_for('username_post',username=user.username, page=page_num) }}"> {{ page_num }} </a>
+            {% endif %}
+        {% else %}
+            ...
+        {% endif %}
+    {% endfor %}
+<!--    <p>{{ posts.content }}</p>-->
+        <br>
+{% endblock content %}

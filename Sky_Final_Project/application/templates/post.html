@@ -1,9 +1,10 @@
 
 {% extends 'base.html' %}
 {% block content %}
-  <h6>{{ post.title }}</h6>
-      <p>By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
-      <p> {{ post.content }}</p>
+  <h2>{{ post.title }}</h2>
+        <div class="review-image-center"><img src="../static/posts-review.png" alt=""></div>
+      <p class="posts-content-styling">By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+      <p class="posts-content-styling" id="post-paragraph-content" > {{ post.content }}</p>
     {% if post.author == current_user %}
         <button class="btn btn-info btn-sm m-1"><a href="{{url_for('update_post', comment_id=post.id)}}">Edit Review</a></button>
         <br>
