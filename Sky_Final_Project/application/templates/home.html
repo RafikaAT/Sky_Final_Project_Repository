@@ -77,9 +77,10 @@
                 {% for post in posts.items %}
                     <div class="row1">
                         <div class="column1">
-                            <img class="front-page-review-example" src="../static/home-newest-default.png" width = "150px" height="200px">
+                            <a href="{{ url_for('blogreview', comment_id=post.id) }}" alt=“read-movie-review”><img class="front-page-review-example" src="../static/home-newest-default.png" width = "150px" height="200px"></a>
                         </div>
                         <div class="column1">
+                            <h5 class="our-latest-reviews-p"> {{ post.title }} </h5>
                             <p class="our-latest-reviews-p"> {{ post.content | truncate(600) }} </p>
                         </div>
                     </div>

@@ -31,7 +31,7 @@
                 </div>
 <!--            To here - contained within div tag-->
                 <h3 class="film-reviews-movie-title">{{ post.title }}</h3>
-                <p>By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }} at {{ post.date_posted.strftime('%H:%M') }}
+            <p>By <a href="{{ url_for('username_post', username=post.author.username)}}"> {{ post.author.username }} </a> on {{ post.date_posted.strftime('%Y-%m-%d') }} at {{ post.date_posted.strftime('%H:%M') }}
 </p>
                 <p class="film-reviews-snippet"> {{ post.content | truncate(400) }}
                 </p>
