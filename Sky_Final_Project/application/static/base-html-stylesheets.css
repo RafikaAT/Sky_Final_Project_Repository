@@ -198,3 +198,8 @@ a {
     font-size:20px;
     padding: 10px 10px;
     transition:.2s;
+}
+.social-icons:hover{
+    color: white;
+    transition: .5s;
+}
