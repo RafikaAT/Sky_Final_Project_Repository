@@ -121,7 +121,15 @@ section {
 /* Footer */
 
 
+.footer-links li {
+    list-style: none;
+    color: #EC8916;
 
+
+}
+
+
+}
 .form-group {
     color: #EC8916;
     font-family: Source Sans Pro;
@@ -300,4 +308,23 @@ list-style-type:none;}
 footer ul {
     list-style: none;
     color: #EC8916;
+}
+
+.media{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-53%, -50%);
+}
+.social-icons{
+    list-style:none;
+    margin: 10px 10px;
+    display:inline-block;
+    font-size:20px;
+    padding: 10px 10px;
+    transition:.2s;
+}
+.social-icons:hover{
+    color: white;
+    transition: .5s;
 }
