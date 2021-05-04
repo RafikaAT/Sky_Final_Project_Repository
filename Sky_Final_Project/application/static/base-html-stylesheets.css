@@ -39,12 +39,15 @@ section {
 
 #home-main {
     display: flex;
+    height: 350px;
+    border: 1px red solid;
 }
 
 .home-main-pic {
     width: 50%;
     margin: 0;
     padding: 0;
+
 
 }
 
