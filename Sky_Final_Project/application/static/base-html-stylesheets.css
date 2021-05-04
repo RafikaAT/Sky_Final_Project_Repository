@@ -40,7 +40,6 @@ section {
 #home-main {
     display: flex;
     height: 350px;
-    border: 1px red solid;
 }
 
 .home-main-pic {
@@ -71,10 +70,11 @@ section {
     margin-top: 3%;
     margin-bottom: 2%;
     font-size: 20px;
+    margin-bottom: 150px;
 }
 
 .movie-manic-bio a:hover {
-    background-color: white;
+    background-color: #ed6300;
     text-decoration:none;
 }
 
@@ -120,10 +120,7 @@ section {
 
 /* Footer */
 
-.footer-links li {
-    list-style: none;
-    color: #EC8916;
-}
+
 
 .form-group {
     color: #EC8916;
@@ -188,4 +185,120 @@ a {
 .our-latest-reviews-p {
     text-align: justify;
     padding: 20px;
+}
+
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer {
+  background:#081127;
+  color: #EC8916 !important;
+  margin-top: auto;
+  width: 100%;
+}
+.footer-list-top {
+  width: 33.333%;
+}
+.footer-list-top > li {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.footer-list-header {
+  padding: 5px 0 5px 0;
+  color: #EC8916;
+  font: 1em "Oswald", sans-serif;
+}
+.footer-list-anchor {
+  font: 0.8em "Open Sans", sans-serif;
+  color: #EC8916;
+}
+
+.footer-bottom-section {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px;
+  margin-top: 7px;
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto;
+}
+.footer-bottom-wrapper {
+  font-size: 1em;
+  color: #fff;
+}
+.footer-address {
+  display: inline;
+  font-style: normal;
+  font-size:1em;
+}
+ul.no-bullets{
+list-style-type:none;}
+
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 1em;
+  }
+  .footer-list-anchor {
+    font-size: 1em;
+  }
+
+  .footer-bottom-wrapper {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 1em;
+  }
+  .footer-list-anchor {
+    font-size: 1em;
+  }
+
+  .footer-bottom-section {
+    padding: 0 5px 5px 5px;
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto;
+  }
+
+  .footer-bottom-rights {
+    display: block;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 1em;
+  }
+  .footer-list-anchor {
+    font-size: 1em;
+  }
+
+  .footer-bottom-wrapper {
+    font-size: .5em;
+  }
+}
+.facebook{
+    padding:0px;
+    width:40px;
+    text-decoration:none;
+}
+
+footer ul {
+    list-style: none;
+    color: #EC8916;
 }
