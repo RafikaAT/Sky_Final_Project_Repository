@@ -3,10 +3,20 @@
     <h1>{{ current_user.username }}</h1>
     <h2>Your Blog Posts</h2>
     {% for post in posts %}
-        <h3><a href="{{ url_for('post', comment_id=post.id)}}">{{ post.title }}</a></h3>
-        <p> {{ post.content | truncate(400) }} </p>
+        <br>
+        <div class="account-blog-posts-overall">
+            <div class="account-column">
+                <img class="account-default-image" src="../static/movie_maniac.png" alt="default image message">
+            </div>
+            <div class="account-column">
+                <h4 class="within-block-account-blogpost"><a href="{{ url_for('post', comment_id=post.id)}}">{{ post.title }}</a></h4>
+                <p class="within-block-account-blogpost">{{ post.date_posted.strftime('%Y-%m-%d') }} at {{ post.date_posted.strftime('%H:%M') }}</p>
+                <p class="within-block-account-blogpost"> {{ post.content | truncate(400) }} </p>
+            </div>
+        </div>
     {% endfor %}
 <!--    <p>{{ posts.content }}</p>-->
         <a href="{{ url_for('new_comment') }}"><button class="repair_button" type="submit">Post a Review</button></a>
+        <br>
 {% endblock content %}
 

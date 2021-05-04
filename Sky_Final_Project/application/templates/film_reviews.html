@@ -20,22 +20,17 @@
 <!--    </section>-->
 <!--    <br>-->
 
-<!--            {% for post in posts %}-->
-<!--                <h6>{{ post.title }}</h6>-->
-<!--                <p>By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }} </p>-->
-<!--                <p> {{ post.content }}</p>-->
-<!--            {% endfor %}-->
 
     <section>
         <br>
         <div class="preview-and-prompt-button">
-            {% for post in posts %}
+            {% for post in posts.items %}
 <!--            Image showing from here-->
                 <div class="review-image-center">
                     <img src="../static/default_copy.jpg" alt="default image message">
                 </div>
 <!--            To here - contained within div tag-->
-                <h3 class="film-reviews-movie-title">{{ post.title }}<h3>
+                <h3 class="film-reviews-movie-title">{{ post.title }}</h3>
                 <p>By {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d') }} at {{ post.date_posted.strftime('%H:%M') }}
 </p>
                 <p class="film-reviews-snippet"> {{ post.content | truncate(400) }}
@@ -44,6 +39,18 @@
 <!--            Need to fix the comment part-->
                 <a class="read-more-button" href="{{ url_for('blogreview', comment_id=post.id) }}" alt=“read-movie-review”>Read More</a>
                 <br>
+                <br>
+            {% endfor %}
+            {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page_num %}
+                    {% if posts.page == page_num %}
+                        <a class="page-numbers-current" href="{{ url_for('film_reviews', page=page_num) }}"> {{ page_num }} </a>
+                    {% else %}
+                        <a class="page-numbers" href="{{ url_for('film_reviews', page=page_num) }}"> {{ page_num }} </a>
+                    {% endif %}
+                {% else %}
+                    ...
+                {% endif %}
             {% endfor %}
         </div>
     </section>

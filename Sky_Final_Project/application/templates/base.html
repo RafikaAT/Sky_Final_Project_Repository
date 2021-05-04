@@ -41,7 +41,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav custom">
            <div> <a class="nav-link active" href="{{ url_for('film_reviews') }}"> Film Reviews <span class="sr-only">(current)</span></a></div>
-            <div><a class="nav-link" href="{{ url_for('newgodsnezhareborn') }}"> New Gods</a></div>
     <!--        <div><a class="nav-link" href="{{ url_for('new_comment') }}"> Comment</a></div>-->
                 {% if current_user.is_authenticated %}
                     <div><a class="nav-link" href="{{ url_for('account') }}">Account</a></div>

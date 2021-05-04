@@ -16,6 +16,11 @@
     width: 60%;
 }
 
+.film-reviews-snippet{
+    font-size: 20px;
+
+}
+
 .preview-and-prompt-button {
     display: block;
     margin-left: auto;
@@ -51,4 +56,111 @@
 
 .navbar a:hover {
     color:#EC8916;
+}
+
+/*.account-blog-posts-overall {
+    margin-left: 10%;
+    margin-right:30%;
+}
+
+.within-block-account-blogpost{
+    text-align: left;
+}
+
+.account-default-image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    align:left;
+}*/
+
+
+.account-blog-posts-overall {
+    display: flex;
+    flex-direction:row;
+    /*margin-left: auto;
+    margin-right:auto;
+    border: 1px solid red;*/
+}
+
+.account-column{
+    display: flex;
+    flex-direction:column;
+    flex: 1;
+    align-content: flex-start;
+    flex: 1 2 auto;
+    /*border: 1px solid red;*/
+}
+
+.within-block-account-blogpost{
+    text-align: left;
+    padding-left:4%;
+    padding-right:4%;
+}
+
+.account-default-image{
+    display:block;
+    align:left;
+    width: 100%;
+    height:100%;
+    padding-top:4%;
+    padding-bottom:4%;
+    padding-left:10%;
+    padding-right:4%;
+}
+
+.page-numbers{
+    border: 1px #081127;
+    border-radius: 5px;
+    width: 5%;
+    padding-left:0.25%;
+    padding-right:0.25%;
+    padding-top:0.25%;
+    padding-bottom:0.25%;
+    background-color: #EC8916;
+    text-decoration: none;
+    color:black;
+    font-family: Roboto;
+}
+
+.page-numbers:hover{
+    border: 1px #081127;
+    border-radius: 5px;
+    width: 5%;
+    padding-left:0.25%;
+    padding-right:0.25%;
+    padding-top:0.25%;
+    padding-bottom:0.25%;
+    background-color: #ed6300;
+    text-decoration: none;
+    color:black;
+    font-family: Roboto;
+}
+
+.page-numbers-current {
+    border: 1px #081127;
+    border-radius: 5px;
+    width: 5%;
+    padding-left:0.25%;
+    padding-right:0.25%;
+    padding-top:0.25%;
+    padding-bottom:0.25%;
+    background-color: #ed6300;
+    text-decoration: none;
+    color:black;
+    font-family: Roboto;
+}
+
+.page-numbers-current:hover {
+    border: 1px #081127;
+    border-radius: 5px;
+    width: 5%;
+    padding-left:0.25%;
+    padding-right:0.25%;
+    padding-top:0.25%;
+    padding-bottom:0.25%;
+    background-color: #EC8916;
+    text-decoration: none;
+    color:black;
+    font-family: Roboto;
 }

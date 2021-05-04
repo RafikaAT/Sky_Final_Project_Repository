@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Movie Maniac</h1>
+<img class="logo-styling" src="../static/logo-image.png">
+<br>
 <!--May need to change image file paths when we make folders-->
 <!--    <div class="home-main-picture_1"></div>-->
 <!--    <div class="home-main-picture_2"></div>-->
@@ -76,90 +77,80 @@
     <section id="our-latest-reviews">
         <h2>Our Latest Reviews</h2>
             <div class="grid-container">
-                <div class="row1">
-                    <div class="column1">
-                        <img class="front-page-review-example" src="../static/i-tonya.jpg" width = "150px" height="200px">
+                {% for post in posts.items %}
+                    <div class="row1">
+                        <div class="column1">
+                            <img class="front-page-review-example" src="../static/home-newest-default.png" width = "150px" height="200px">
+                        </div>
+                        <div class="column1">
+                            <p class="our-latest-reviews-p"> {{ post.content | truncate(600) }} </p>
+                        </div>
                     </div>
-                    <div class="column1">
-                    <p class="our-latest-reviews-p">Like the jaw-dropping triple-axel jump that made champion figure skater Tonya Harding famous,
-                        Margot Robbie’s performance in this satirical, postmodern tale of the disgraced star is a
-                        tour-de-force tornado that balances finely nuanced character development with impressively
-                        punchy physicality. Starring in a passion-project that she also produced, Robbie never puts a
-                        foot wrong as the proud Portland outsider (“Trashy Tonya doesn’t belong”) who outperformed her
-                        more privileged competitors, only to see her career implode after being implicated in a violent
-                        assault on fellow skater Nancy Kerrigan in 1994.
-                        <br><br>
-                        Like the media frenzy that surrounded those infamous events, Craig Gillespie’s darkly comic film
-                        (from a sharp Steven Rogers script) filters its story through a prism of conflicting narratives
-                        that clash like blades on broken ice. The result resembles an adrenalised mashup of To Die For
-                            and <i>Blades of Glory</i>, with the stylish zing of <i>American Hustle</i> and a hint of the bruising
-                            domestic violence of <i>Raging Bull</i>.</p>
-                    </div>
-                </div>
-                <div class="row1">
-                    <div class="column1">
-                        <img class="front-page-review-example" src="../static/the-boy-image.jpg" width = "150px" height="200px">
-                    </div>
-                    <div class="column1">
-                        <p class="our-latest-reviews-p">In the pantheon of creepy dolls – from Talky Tina in “The Twilight Zone” to Chucky in the
-                        “Child’s Play” movies to Annabelle in “The Conjuring” – it’s often the idea of the inanimate
-                        object coming to life and wreaking bloody havoc that’s more frightening than the actual
-                        execution. It’s a tricky thing to pull off: drawing shivers from turning a childhood plaything
-                            into something truly menacing vs. eliciting giggles at the sheer silliness of the
-                            proposition.
-                        <br><br>
-                        Such is the unfortunate – and unintentionally hilarious – case of “The Boy,” whose moody
-                            atmosphere and committed performances can’t conceal the fact that this is one dumb flick.
-                            (It’s also a flick that wasn’t shown to critics before opening day; the studio actually
-                            pulled its scheduled Thursday-night sneaks of the film, in case you were wondering whether
-                            to be optimistic.)</p>
-                    </div>
-                </div>
-                <div class="row1">
-                    <div class="column1">
-                        <img class="front-page-review-example" src="../static/get-hard-image.jpg" width = "150px" height="200px">
-                    </div>
-                    <div class="column1">
-                        <p class="our-latest-reviews-p">This film about a car wash manager, Darnell (Kevin Hart), helping a convicted hedge fund
-                            manager prepare for a stint in maximum security prison is driven by fear of non-consensual
-                            buggery, mostly at the hands of looming African-American prisoners with deep voices. At its
-                            core, the story is about a wimpy White man's fear of being owned and "turned out" by Black
-                            men—treated as a "bitch," to use a word both characters employ pretty much constantly. The
-                            script has the hedge fund manager "training" for prison by bulking up, and learning to carry
-                            himself with more confidence, and fight, and talk "black." None of this will be a surprise
-                            to anyone who's seen the subway and bus poster, which shows the hedge fund manager, James,
-                            seated, his face frozen in a not-so-secretly terrified fake scowl, while the car wash owner
-                            Darnell stands behind him, braiding his hair into cornrows.
-                            <br><br>
-                            Before we go further, let the record reflect that nothing about this material is inherently
-                            unacceptable. To quote the title of a Steve Martin album, comedy isn't pretty. Few things
-                            are more antithetical to the idea of art—not to mention more unfunny and boring—than a
-                            comedy that's mainly concerned with proving how sensitive it is.</p>
-                    </div>
-                </div>
-                <div class="row1">
-                    <div class="column1">
-                        <img class="front-page-review-example" src="../static/all-the-bright-places-image.jpg" width = "150px" height="200px">
-                    </div>
-                    <div class="column1">
-                        <p class="our-latest-reviews-p">One of the many life lessons preached by the well-intentioned, if ultimately ill-advised,
-                            young adult (YA) adaptation All the Bright Places is that even in the darkness, light is
-                            waiting. The lead teens, played of course by twentysomethings, have experienced some form of
-                            trauma in their past, and together they try to find meaning and hope in all the messiness.
-                            It’s something director Brett Haley tries as well, with the film that surrounds them
-                            layering issues of grief, suicide and mental illness while also trying to invest us in a
-                            cutesy romance. It’s a delicate balance, especially for a film aimed at a young, sensitive
-                            audience, and it’s not one Haley ever manages to perfect, struggling to let Jennifer Niven’s
-                            acclaimed source material breathe on its own, erring from twee to maudlin so fast it gives
-                            us whiplash.
-                            <br><br>
-                            In the first act, though, there’s a concept that I found rather intriguing. The film starts
-                            with Violet Markey (Elle Fanning) standing on the edge of a bridge, contemplating the fall,
-                            interrupted by Theodore Finch (Justice Smith). Her sister died in a car accident the year
-                            before, and she has been trapped in an emotional malaise ever since, unable to re-enter the
-                            world.</p>
-                    </div>
-                </div>
+<!--                <div class="row1">-->
+<!--                    <div class="column1">-->
+<!--                        <img class="front-page-review-example" src="../static/the-boy-image.jpg" width = "150px" height="200px">-->
+<!--                    </div>-->
+<!--                    <div class="column1">-->
+<!--                        <p class="our-latest-reviews-p">In the pantheon of creepy dolls – from Talky Tina in “The Twilight Zone” to Chucky in the-->
+<!--                        “Child’s Play” movies to Annabelle in “The Conjuring” – it’s often the idea of the inanimate-->
+<!--                        object coming to life and wreaking bloody havoc that’s more frightening than the actual-->
+<!--                        execution. It’s a tricky thing to pull off: drawing shivers from turning a childhood plaything-->
+<!--                            into something truly menacing vs. eliciting giggles at the sheer silliness of the-->
+<!--                            proposition.-->
+<!--                        <br><br>-->
+<!--                        Such is the unfortunate – and unintentionally hilarious – case of “The Boy,” whose moody-->
+<!--                            atmosphere and committed performances can’t conceal the fact that this is one dumb flick.-->
+<!--                            (It’s also a flick that wasn’t shown to critics before opening day; the studio actually-->
+<!--                            pulled its scheduled Thursday-night sneaks of the film, in case you were wondering whether-->
+<!--                            to be optimistic.)</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row1">-->
+<!--                    <div class="column1">-->
+<!--                        <img class="front-page-review-example" src="../static/get-hard-image.jpg" width = "150px" height="200px">-->
+<!--                    </div>-->
+<!--                    <div class="column1">-->
+<!--                        <p class="our-latest-reviews-p">This film about a car wash manager, Darnell (Kevin Hart), helping a convicted hedge fund-->
+<!--                            manager prepare for a stint in maximum security prison is driven by fear of non-consensual-->
+<!--                            buggery, mostly at the hands of looming African-American prisoners with deep voices. At its-->
+<!--                            core, the story is about a wimpy White man's fear of being owned and "turned out" by Black-->
+<!--                            men—treated as a "bitch," to use a word both characters employ pretty much constantly. The-->
+<!--                            script has the hedge fund manager "training" for prison by bulking up, and learning to carry-->
+<!--                            himself with more confidence, and fight, and talk "black." None of this will be a surprise-->
+<!--                            to anyone who's seen the subway and bus poster, which shows the hedge fund manager, James,-->
+<!--                            seated, his face frozen in a not-so-secretly terrified fake scowl, while the car wash owner-->
+<!--                            Darnell stands behind him, braiding his hair into cornrows.-->
+<!--                            <br><br>-->
+<!--                            Before we go further, let the record reflect that nothing about this material is inherently-->
+<!--                            unacceptable. To quote the title of a Steve Martin album, comedy isn't pretty. Few things-->
+<!--                            are more antithetical to the idea of art—not to mention more unfunny and boring—than a-->
+<!--                            comedy that's mainly concerned with proving how sensitive it is.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row1">-->
+<!--                    <div class="column1">-->
+<!--                        <img class="front-page-review-example" src="../static/all-the-bright-places-image.jpg" width = "150px" height="200px">-->
+<!--                    </div>-->
+<!--                    <div class="column1">-->
+<!--                        <p class="our-latest-reviews-p">One of the many life lessons preached by the well-intentioned, if ultimately ill-advised,-->
+<!--                            young adult (YA) adaptation All the Bright Places is that even in the darkness, light is-->
+<!--                            waiting. The lead teens, played of course by twentysomethings, have experienced some form of-->
+<!--                            trauma in their past, and together they try to find meaning and hope in all the messiness.-->
+<!--                            It’s something director Brett Haley tries as well, with the film that surrounds them-->
+<!--                            layering issues of grief, suicide and mental illness while also trying to invest us in a-->
+<!--                            cutesy romance. It’s a delicate balance, especially for a film aimed at a young, sensitive-->
+<!--                            audience, and it’s not one Haley ever manages to perfect, struggling to let Jennifer Niven’s-->
+<!--                            acclaimed source material breathe on its own, erring from twee to maudlin so fast it gives-->
+<!--                            us whiplash.-->
+<!--                            <br><br>-->
+<!--                            In the first act, though, there’s a concept that I found rather intriguing. The film starts-->
+<!--                            with Violet Markey (Elle Fanning) standing on the edge of a bridge, contemplating the fall,-->
+<!--                            interrupted by Theodore Finch (Justice Smith). Her sister died in a car accident the year-->
+<!--                            before, and she has been trapped in an emotional malaise ever since, unable to re-enter the-->
+<!--                            world.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+                {% endfor %}
             </div>
     </section>
 
