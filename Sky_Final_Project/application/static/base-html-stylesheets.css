@@ -113,8 +113,13 @@ section {
 .footer-links li {
     list-style: none;
     color: #EC8916;
+
+
 }
 
+
+
+}
 .form-group {
     color: #EC8916;
     font-family: Source Sans Pro;
@@ -179,3 +184,17 @@ a {
     text-align: justify;
     padding: 20px;
 }
+
+.media{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-53%, -50%);
+}
+.social-icons{
+    list-style:none;
+    margin: 10px 10px;
+    display:inline-block;
+    font-size:20px;
+    padding: 10px 10px;
+    transition:.2s;
