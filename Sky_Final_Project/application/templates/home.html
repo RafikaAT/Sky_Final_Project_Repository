@@ -81,6 +81,7 @@
                         </div>
                         <div class="column1">
                             <h5 class="our-latest-reviews-p"> {{ post.title }} </h5>
+                            <p class="our-latest-reviews-p" >By <a href="{{ url_for('username_post', username=post.author.username)}}"> {{ post.author.username }} </a> on {{ post.date_posted.strftime('%Y-%m-%d') }} at {{ post.date_posted.strftime('%H:%M') }}</p>
                             <p class="our-latest-reviews-p"> {{ post.content | truncate(600) }} </p>
                         </div>
                     </div>
